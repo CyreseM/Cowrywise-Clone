@@ -111,7 +111,7 @@ section{
     display: flex;
     justify-content: center;
     width: 340px;
-    height: 183px;
+    height: 170px;
     position: absolute;
     top:65%;
     left: 25%;
@@ -121,7 +121,11 @@ section{
     padding-top: 10px;
     max-width: 276px;
     max-height: 94px;
-
+}
+.comment_text > p:nth-child(1){
+    font-size: 14px;
+    color: #6c82a3;
+    margin-top: 20px;
 }
 
 #link{
@@ -129,7 +133,9 @@ section{
     display: flex;
     justify-content: space-between;
 }
-
+#link > span:nth-child(2){
+    color: #0066f5;
+}
 .section-info h1{
     max-width: 630px;
     max-height: 220px;
@@ -170,7 +176,7 @@ section{
 
 .form button{
     width: 170px;
-    height: 50px;
+    height: 54px;
     background-color: #0066f5;
     border: none;
     color: white;
@@ -201,9 +207,7 @@ section{
 .pic_selection > img:hover{
     filter: grayscale(100%);
 }
-.pic_selection > img:focus{
-    filter: grayscale(100%);
-}
+
 .pic_selection {
     position: absolute;
     display: flex;
@@ -212,7 +216,7 @@ section{
     justify-content: center;
     bottom: 0;
     width: 315px;
-    height: 80px;
+    height: 100px;
 }
 .advertisement h2{
     color: #082552;

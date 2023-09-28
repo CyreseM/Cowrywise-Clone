@@ -59,7 +59,7 @@ function Body(){
                 <div className="picture-display">
                     <div className="backpanel">
                         <div className="pic_selection">
-                            <img src={mayokun} onClick={()=>handlePicChange(commentors[0])}   alt="mayokun pic"/>
+                            <img src={mayokun} onClick={()=>handlePicChange(commentors[0])}  alt="mayokun pic"/>
                             <img src={wande} onClick={()=>handlePicChange(commentors[1])}  alt="mayokun pic"/>
                             <img src={wura} onClick={()=>handlePicChange(commentors[2])}  alt="mayokun pic"/>
                         </div>
