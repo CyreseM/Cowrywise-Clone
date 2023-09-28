@@ -98,6 +98,7 @@ section{
     height: 550px;
     width: auto;
 }
+
 .add{
     animation: turn 0.5s linear;
 }
@@ -152,16 +153,21 @@ section{
 .form{
     display: flex;
 }
-.form input{
+.form input {
     width: 323px;
     height: 50px;
     border-radius: 6px;
-    border-style: solid;
+    border: 2px solid grey; /* Set an initial border color */
     margin: 0 10px 0 0;
+    transition: border-color 0.5s ease-in; /* Add the transition for border-color */
 }
-.form input:hover{
-    border-color: #0067f5;
+
+
+.form input:focus {
+    outline: none;
+    border-color: #0067f5; /* Change the border color on hover */
 }
+
 .form button{
     width: 170px;
     height: 50px;
@@ -190,6 +196,13 @@ section{
     left: 0%;
     top: 0%;
     margin: 0 10px ;
+    cursor: pointer;
+}
+.pic_selection > img:hover{
+    filter: grayscale(100%);
+}
+.pic_selection > img:focus{
+    filter: grayscale(100%);
 }
 .pic_selection {
     position: absolute;

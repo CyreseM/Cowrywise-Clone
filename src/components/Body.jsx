@@ -35,21 +35,23 @@ function Body(){
         const imgRef = useRef(null)
         
   
-        function addRemove(){
-            imgRef.current.classList.add('add')
+        function add(){
+             imgRef.current.classList.add('add')
+             setTimeout(() => {
+                imgRef.current.classList.remove('add');
+              }, 500);
             console.log(imgRef.current.classList)
+
         }
 
-    function handlePicChange(val){
-        addRemove()
-        console.log(imgRef.current.classList)
-
+     function handlePicChange(val){
+        add()
         picState(val.picture)
         commentState(val.comment)
         nameState(val.name)
         handleState(val.handle)
     }
-    useEffect(addRemove,[])
+    useEffect(add,[])
 
     return(
         <>
@@ -57,9 +59,9 @@ function Body(){
                 <div className="picture-display">
                     <div className="backpanel">
                         <div className="pic_selection">
-                            <img src={mayokun} onClick={()=>handlePicChange(commentors[0])} alt="mayokun pic"/>
-                            <img src={wande} onClick={()=>handlePicChange(commentors[1])} alt="mayokun pic"/>
-                            <img src={wura} onClick={()=>handlePicChange(commentors[2])} alt="mayokun pic"/>
+                            <img src={mayokun} onClick={()=>handlePicChange(commentors[0])}   alt="mayokun pic"/>
+                            <img src={wande} onClick={()=>handlePicChange(commentors[1])}  alt="mayokun pic"/>
+                            <img src={wura} onClick={()=>handlePicChange(commentors[2])}  alt="mayokun pic"/>
                         </div>
                     </div>
 
