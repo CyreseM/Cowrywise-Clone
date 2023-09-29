@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 header{
     display: grid;
@@ -73,19 +74,19 @@ header{
 
 /* body*/
 section{
-    height: 100vh;
+    height: 800px;
     margin-top: 20px;
     max-width: 100%;
     display: grid;
     gap: 80px;
-    grid-template-columns: 630px 630px;
+    grid-template-columns: 900px 630px;
     grid-template-rows: 680px;
     padding: 0 10vw 0 10vw;
 }
 
 .picture-display .backpanel{
-    width: 50%;
-    height: 105%;
+    width: 35%;
+    height: 115%;
     background-color: rgb(252, 239, 234);
     position: relative;
     overflow: hidden;
@@ -111,9 +112,9 @@ section{
     display: flex;
     justify-content: center;
     width: 340px;
-    height: 170px;
+    height: 200px;
     position: absolute;
-    top:65%;
+    top:60%;
     left: 25%;
     padding-bottom: 10px;
 }
@@ -184,14 +185,15 @@ section{
 }
 
 .bars_section{
-    width: 100%;
-    height: 830px;
+    max-width: 100%;
+    height: 800px;
     display: grid;
-    gap: 80px;
-    justify-content: center;
+    gap: 100px;
     align-content: center;
     grid-template-columns: 630px 630px;
     grid-template-rows: 680px;
+    padding-left: 210px;
+    margin-top: 60px;
 
 }
 
@@ -246,62 +248,14 @@ section{
 h2 small{
     font-weight: 100;
 }
-.bars{
-    background-color: red;
-}
-.container {
-    width: 200px;
-    height: 200px;
-    perspective: 500px;
-    margin: 100px;
-  }
-  
-  .cube {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-  }
-  
-  .face {
-    width: 200px;
-    height: 200px;
-    background: skyblue;
-    border: 2px solid black;
-    position: absolute;
-    opacity: 0.5;
+
+.phone{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
-  }
+}
 
-
-  .cube {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    transform: rotate3d(0, 1, 0, 45deg);
-  }
-  .front {
-    transform: translateZ(100px);
-  }
-  .left {
-    transform: translateX(-100px) rotateY(-90deg);
-  }
-  
-  .right {
-    transform: translateX(100px) rotateY(90deg);
-  }
-  .top {
-    transform: translateY(-100px) rotateX(90deg);
-  }
-  
-  .bottom {
-    transform: translateY(100px) rotateX(-90deg);
-  }
-  .back {
-    transform: translateZ(-100px) rotateY(180deg);
-  }
+.phone>img{
+    width: auto;
+    height: 650px;
+}

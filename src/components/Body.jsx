@@ -1,8 +1,9 @@
 import mayokun from '../assets/images/mayokun.jpg'
 import wande from '../assets/images/wande.jpg'
 import wura from '../assets/images/wura.jpg'
+import phone from '../assets/images/app-screenshot-investment-platform-nigeria.png'
 import '../App.css'
-import { useEffect, useState, useRef} from 'react'
+import { useEffect, useState, useRef, useCallback} from 'react'
 
 function Body(){
     const[pic,picState] = useState(mayokun)
@@ -35,14 +36,14 @@ function Body(){
         const imgRef = useRef(null)
         
   
-        function add(){
-             imgRef.current.classList.add('add')
-             setTimeout(() => {
-                imgRef.current.classList.remove('add');
-              }, 500);
-            console.log(imgRef.current.classList)
+        const add = useCallback(()=> {
+            imgRef.current.classList.add('add')
+            setTimeout(() => {
+               imgRef.current.classList.remove('add');
+             }, 500);
+           console.log(imgRef.current.classList)
 
-        }
+       })
 
      function handlePicChange(val){
         add()
@@ -51,7 +52,7 @@ function Body(){
         nameState(val.name)
         handleState(val.handle)
     }
-    useEffect(add,[])
+    useEffect(()=>{add()},[add])
 
     return(
         <>
@@ -94,18 +95,8 @@ function Body(){
                     <button>Start Your Financial Journey</button>
                 </div>
 
-   
-                <div className="bars">
-                    <div class="container">
-                        <div class="cube">
-                        <div class="face top">Top</div>
-                            <div class="face bottom">Bottom</div>
-                            <div class="face left">Left</div>
-                            <div class="face right">Right</div>
-                            <div class="face front">Front</div>
-                            <div class="face back">Back</div>
-                        </div>
-                    </div>
+                <div className="phone">
+                    <img src={phone} alt="" />
                 </div>
             </div>
         </>
